@@ -84,7 +84,7 @@ function download_single_level_data(
     variable::AbstractString;
     hours=0:23,
     resolution=1.0,
-    bbox=[50, -130, 24, -65],
+    bbox=[37, -107, 25, -95],
 )
     if isfile(filename)
         println("File $filename already exists. Skipping download.")
@@ -144,7 +144,7 @@ function download_pressure_level_data(
     level::Int;
     hours=0:23,
     resolution=1.0,
-    bbox=[50, -130, 24, -65],
+    bbox=[37, -107, 25, -95],
 )
     if isfile(filename)
         println("File $filename already exists. Skipping download.")
@@ -271,7 +271,7 @@ function run_demo()
 
     years = 2019:2020 # example time range
     for year in years
-
+        
         # Download 2m air temperature for the year 2020
         download_single_level_data.(
             year, joinpath(data_dir, "2m_temperature_$year.nc"), "2m_temperature"
@@ -301,4 +301,6 @@ function run_demo()
     return nothing
 end
 
-run_demo()
+# run_demo()
+
+# data_dict = open_mfdataset(["2m_temperature_2019.nc", "2m_temperature_2019.nc"], "temperature")
