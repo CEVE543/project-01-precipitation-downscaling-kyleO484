@@ -269,7 +269,7 @@ function run_demo()
     # the path to the raw data folder
     data_dir = joinpath(HOMEDIR, "data", "raw")
 
-    years = 2019:2020 # example time range
+    years = 2002:2022 # example time range
     for year in years
         
         # Download 2m air temperature for the year 2020
@@ -301,6 +301,6 @@ function run_demo()
     return nothing
 end
 
-# run_demo()
+run_demo()
 
 # data_dict = open_mfdataset(["2m_temperature_2019.nc", "2m_temperature_2019.nc"], "temperature")
