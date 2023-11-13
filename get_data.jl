@@ -301,6 +301,6 @@ function run_demo()
     return nothing
 end
 
-run_demo()
+#run_demo()
 
 # data_dict = open_mfdataset(["2m_temperature_2019.nc", "2m_temperature_2019.nc"], "temperature")
